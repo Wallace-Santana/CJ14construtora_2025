@@ -174,20 +174,49 @@ main {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(10, 34, 64, 0.6), rgba(10, 34, 64, 0.6)), url('assets/imagens/Bannerotmizi.jpg') no-repeat center center/cover;
-    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    position: relative; /* Essencial para posicionar os filhos */
+    overflow: hidden;  /* Garante que nada vaze para fora */
 }
 
-.hero p {
-  color: white;
-  font-size: 1.2rem;
-  font-weight: 400;
-  max-width: 650px;
-  margin: 20px auto 30px auto;
+/* 1. Criamos a sobreposição escura com um pseudo-elemento */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 34, 64, 0.6);
+    z-index: 1; /* Camada 1: Fica acima da imagem */
+}
+
+/* 2. Estilizamos a nossa nova tag <img> para se comportar como um fundo */
+.hero-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Equivalente ao 'background-size: cover' */
+    z-index: 0;  /* Camada 0: Fica no fundo de tudo */
+}
+
+/* 3. Garantimos que o conteúdo (texto e botão) fique por cima de tudo */
+.hero-content {
+    position: relative;
+    z-index: 2; /* Camada 2: Fica na frente da sobreposição e da imagem */
+}
+
+.hero-content p {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+    max-width: 650px;
+    margin: 20px auto 30px auto;
 }
 
 .diferenciais,
