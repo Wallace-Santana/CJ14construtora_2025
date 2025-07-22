@@ -1,4 +1,4 @@
-/* --- Reset Básico e Estilos Globais --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +23,6 @@ body {
     padding: 0 20px;
 }
 
-/* --- Paleta de Cores e Variáveis --- */
 :root {
     --cor-azul-escuro: #0a2240;
     --cor-laranja-destaque: #b32701;
@@ -35,7 +34,7 @@ body {
     --raio-borda: 16px;
 }
 
-/* --- Tipografia --- */
+
 h1, h2, h3, h4 {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
@@ -67,7 +66,7 @@ p.subtitle {
     font-size: 1.1rem;
 }
 
-/* --- Animações --- */
+
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -79,7 +78,7 @@ p.subtitle {
     transform: translateY(0);
 }
 
-/* --- Componentes --- */
+
 .cta-button {
     display: inline-block;
     background-color: var(--cor-laranja-destaque);
@@ -101,9 +100,9 @@ p.subtitle {
     box-shadow: 0 7px 25px rgba(179, 39, 1, 0.35);
 }
 
-/* --- Cabeçalho --- */
+
 .header {
-    background-color: rgb(255, 255, 255); /* Fundo branco */
+    background-color: rgb(255, 255, 255); 
     padding: 15px 0;
     position: fixed;
     width: 100%;
@@ -140,7 +139,7 @@ p.subtitle {
 }
 
 .header nav a {
-    color: var(--cor-azul-escuro); /* Cor do texto do menu */
+    color: var(--cor-azul-escuro); 
     text-decoration: none;
     font-weight: 500;
     position: relative;
@@ -168,12 +167,11 @@ p.subtitle {
     width: 100%;
 }
 
-/* --- Estrutura Principal --- */
+
 main {
     display: block;
 }
 
-/* --- Seções --- */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(10, 34, 64, 0.6), rgba(10, 34, 64, 0.6)), url('/assets/imagens/Banner.jpg') no-repeat center center/cover;
@@ -199,14 +197,14 @@ main {
     padding: 120px 0;
 }
 
-/* SEÇÃO DIFERENCIAIS */
+
 .diferenciais {
     background-color: var(--cor-branco);
 }
 .diferenciais-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px; /* Espaçamento aumentado */
+    gap: 40px; 
     margin-top: 60px;
 }
 .diferencial-item {
@@ -218,7 +216,7 @@ main {
     margin-bottom: 25px;
 }
 
-/* SEÇÃO PROJETOS (GRADE 2x2) */
+
 .projetos {
     background-color: var(--cor-fundo-claro);
 }
@@ -285,7 +283,7 @@ main {
     transform: translateY(0);
 }
 
-/* SEÇÃO SOBRE NÓS (CORRIGIDA) */
+
 .sobre-nos {
     background-color: var(--cor-branco);
 }
@@ -342,7 +340,7 @@ main {
     font-weight: 600;
 }
 
-/* SEÇÃO DE CONTATO UNIFICADA */
+
 .contato {
     background-color: var(--cor-fundo-claro);
 }
@@ -420,7 +418,7 @@ main {
     line-height: 1.6;
 }
 
-/* --- Rodapé --- */
+
 .footer {
     background-color: var(--cor-fundo-escuro);
     color: #aaa;
@@ -429,7 +427,7 @@ main {
     font-size: 0.9rem;
 }
 
-/* --- Media Queries --- */
+
 @media (max-width: 1024px) {
     .sobre-nos-wrapper,
     .contato-wrapper {
