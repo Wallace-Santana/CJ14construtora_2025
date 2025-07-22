@@ -174,7 +174,7 @@ main {
 
 .hero {
     height: 100vh;
-    background: linear-gradient(rgba(10, 34, 64, 0.6), rgba(10, 34, 64, 0.6)), url('./assets/imagens/Banner.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(10, 34, 64, 0.6), rgba(10, 34, 64, 0.6)), url('/assets/imagens/Bannerotmizi.jpg') no-repeat center center/cover;
     background-attachment: fixed;
     display: flex;
     align-items: center;
